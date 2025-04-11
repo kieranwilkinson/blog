@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <h2>Recent Posts</h2>
+  <ul>
+    {{ range first 4 (where ($.Site.RegularPages) ".Section" "in" (slice "archive")) }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a> : {{ .Date.Format "2006-01-02" }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
