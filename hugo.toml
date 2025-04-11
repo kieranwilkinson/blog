@@ -1,4 +1,4 @@
-baseURL = "http://kieranwilkinson.co.uk/"
+baseURL = "https://kieranwilkinson.co.uk/"
 theme = "hugo-bearcub"
 copyright = "Kieran Wilkinson"
 defaultContentLanguage = "en"
