@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hello, I’m Kieran Wilkinson. 👋</title>
+    <link>https://kieranwilkinson.co.uk/archive/</link>
+    <description>Recent content on Hello, I’m Kieran Wilkinson. 👋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>kieranlukewilkinson@gmail.com (Kieran Wilkinson)</managingEditor>
+    <webMaster>kieranlukewilkinson@gmail.com (Kieran Wilkinson)</webMaster>
+    <copyright>Kieran Wilkinson</copyright>
+    <lastBuildDate>Fri, 11 Apr 2025 18:01:14 +0100</lastBuildDate>
+    <atom:link href="https://kieranwilkinson.co.uk/archive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World! 🌍</title>
+      <link>https://kieranwilkinson.co.uk/archive/hello-world/</link>
+      <pubDate>Fri, 11 Apr 2025 22:21:20 +0100</pubDate><author>kieranlukewilkinson@gmail.com (Kieran Wilkinson)</author>
+      <guid>https://kieranwilkinson.co.uk/archive/hello-world/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <content:encoded><![CDATA[
+
+
+
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+  </channel>
+</rss>
