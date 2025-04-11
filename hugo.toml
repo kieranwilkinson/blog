@@ -1,0 +1,4 @@
+baseURL = 'kieranwilkinson.co.uk'
+languageCode = 'en-us'
+title = 'blog'
+theme = 'hugo-bearcub'
