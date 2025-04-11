@@ -1,6 +1,6 @@
 baseURL = "http://kieranwilkinson.co.uk/"
 theme = "hugo-bearcub"
-copyright = "© Kieran Wilkinson 2025"
+copyright = "Kieran Wilkinson"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 
