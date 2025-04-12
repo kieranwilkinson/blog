@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://kieranwilkinson.co.uk/archive/hello-world/</loc>
-    <lastmod>2025-04-11T22:21:20+01:00</lastmod>
-  </url><url>
-    <loc>https://kieranwilkinson.co.uk/</loc>
-    <lastmod>2025-04-11T18:01:14+01:00</lastmod>
-  </url><url>
-    <loc>https://kieranwilkinson.co.uk/archive/</loc>
-    <lastmod>2025-04-11T18:01:14+01:00</lastmod>
-  </url><url>
-    <loc>https://kieranwilkinson.co.uk/categories/</loc>
-  </url><url>
-    <loc>https://kieranwilkinson.co.uk/tags/</loc>
-  </url>
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://kieranwilkinson.co.uk/archive/hello-world/</loc><lastmod>2025-04-11T22:21:20+01:00</lastmod></url><url><loc>https://kieranwilkinson.co.uk/</loc><lastmod>2025-04-11T18:01:14+01:00</lastmod></url><url><loc>https://kieranwilkinson.co.uk/archive/</loc><lastmod>2025-04-11T18:01:14+01:00</lastmod></url><url><loc>https://kieranwilkinson.co.uk/categories/</loc></url><url><loc>https://kieranwilkinson.co.uk/tags/</loc></url></urlset>
