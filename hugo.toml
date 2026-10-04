@@ -22,10 +22,14 @@ weight   = 1
     LanguageCode = "en-US"
     contentDir = "content"
     [languages.en.params]
-      madeWith = "© 2025"
+      madeWith = "© 2026"
 
 [params]
-  description = "Welcome to my technical art journal"
+  description = """
+Confident creative technologist and real-time technical director \
+with experience in large-scale projects spanning film visual effects, \ 
+games, and on-set virtual production.\
+"""
   favicon = "images/favicon.ico"
   images = ["images/share.webp"]
   title = "Kieran Wilkinson"
