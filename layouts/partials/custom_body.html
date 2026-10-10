@@ -1,0 +1,4 @@
+{{ if .Page.Store.Get "hasCodeBlock" }}
+  {{ $copy := resources.Get "js/copy-code.js" | minify | fingerprint }}
+  <script src="{{ $copy.RelPermalink }}"></script>
+{{ end }}

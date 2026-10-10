@@ -1,40 +1,61 @@
 {{ define "main" }}
-<content>
-
-  {{ .Content }}
- 
-  {{ if .Data.Singular }}
-    <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
+{{ $journal := site.GetPage (index site.MainSections 0) }}
+{{ $home := dict "name" $journal.Title "url" $journal.RelPermalink }}
+<header class="page-header">
+  {{ if eq .Kind "term" }}
+    {{ partial "page-label.html" (slice $home (printf "#%s" (lower .Title))) }}
+    <h1 class="visually-hidden">Topic: {{ .Title }}</h1>
+  {{ else if eq .Kind "taxonomy" }}
+    {{ partial "page-label.html" (slice $home "Topics") }}
+    <h1 class="visually-hidden">Topics</h1>
+  {{ else }}
+    {{ partial "page-label.html" (slice .Title) }}
+    <h1 class="visually-hidden">{{ .Title }}</h1>
   {{ end }}
+  {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+</header>
+
+{{ if eq .Kind "taxonomy" }}
+  <div class="topics">
+    {{ range .Data.Terms.ByCount }}
+      <a class="topic" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }} <span>{{ .Count }}</span></a>
+    {{ end }}
+  </div>
+{{ else if eq .Kind "term" }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
-      <span>
-        <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-            {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
-          </time>
-        </i>
-      </span>
-      {{ if .Params.link }}
-        <a href="{{ .Params.link }}" target="_blank">{{ .Title }} ↪</a>
-      {{ else }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
-    </li>
-    {{ else }}
-    <li>
-      {{ i18n "no-posts" }}
+      <span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format site.Params.dateFormat }}</time></span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>
     {{ end }}
   </ul>
-  {{ if not .Data.Singular }}
-    <div>
-      {{ range .Site.Taxonomies.tags }}
-        <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>
+{{ else }}
+  {{ range .Pages.GroupByDate "2006" }}
+    <h2 class="section-label">{{ .Key }}</h2>
+    <ul class="blog-posts">
+      {{ range .Pages }}
+      <li>
+        <span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan" }}</time>
+        </span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
       {{ end }}
-    </div>
+    </ul>
+  {{ else }}
+    <p class="muted">{{ i18n "no-posts" }}</p>
   {{ end }}
-  
-</content>
+
+  {{ if eq .Kind "section" }}
+    {{ with site.Taxonomies.tags }}
+      <h2 class="section-label">Topics</h2>
+      <div class="topics">
+        {{ range .ByCount }}
+          <a class="topic" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }} <span>{{ .Count }}</span></a>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ end }}

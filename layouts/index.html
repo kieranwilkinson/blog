@@ -1,12 +1,23 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <h2>Recent Posts</h2>
-  <ul>
-    {{ range first 4 (where ($.Site.RegularPages) ".Section" "in" (slice "archive")) }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a> : {{ .Date.Format "2006-01-02" }}
-      </li>
+<div class="home">
+  <h1 class="visually-hidden">{{ site.Title }}</h1>
+  <section class="intro">
+    {{ .Content }}
+  </section>
+
+  {{ $posts := where site.RegularPages "Section" "in" site.MainSections }}
+  {{ with $posts }}
+  <h2>Recent posts</h2>
+  <ul class="blog-posts">
+    {{ range first 5 . }}
+    <li>
+      <span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format site.Params.dateFormat }}</time>
+      </span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
     {{ end }}
   </ul>
+  {{ end }}
+</div>
 {{ end }}

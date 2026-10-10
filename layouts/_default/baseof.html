@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{- partial "favicon.html" . -}}
+  <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{- end }}</title>
+  {{- partial "seo_tags.html" . -}}
+
+  {{ if .Page.Store.Get "hasCodeBlock" }}
+    {{ $syntax := resources.Get "syntax.css" | minify }}
+    <link href="{{ $syntax.RelPermalink }}" rel="stylesheet">
+  {{ end }}
+
+  {{ with .OutputFormats.Get "rss" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+  {{ end }}
+
+  {{- partial "custom_head.html" . -}}
+</head>
+
+<body>
+  <header>
+    {{- partial "header.html" . -}}
+  </header>
+  <main id="main-content">
+    {{- block "main" . }}{{- end }}
+  </main>
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+  {{- partial "custom_body.html" . -}}
+</body>
+
+</html>
