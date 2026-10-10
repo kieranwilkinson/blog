@@ -1,6 +1,4 @@
-{{/* Overrides the theme nav: single-language site, so the translation links
-     (which use the deprecated .Site.Languages) are dropped. */}}
-{{ range .Site.Menus.main.ByWeight }}
-  <a href="{{ .URL }}">{{ .Name }}</a>
+{{ $page := .Page }}
+{{ range site.Menus.main.ByWeight }}
+  <a href="{{ .URL }}"{{ if eq $page.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a>
 {{ end }}
-<a href='{{ absURL "index.xml" }}'>RSS</a>

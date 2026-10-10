@@ -1,0 +1,11 @@
+{{ define "title" }}Page not found | {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<header class="page-header">
+  {{ partial "page-label.html" (slice "404") }}
+  <h1 class="visually-hidden">Page not found</h1>
+  <div class="page-intro">
+    <p>Page not found.</p>
+  </div>
+</header>
+{{ end }}

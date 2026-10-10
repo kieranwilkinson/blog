@@ -1,0 +1,43 @@
+{{ define "main" }}
+<header class="post-header">
+  {{ with .CurrentSection }}
+    {{ partial "page-label.html" (slice (dict "name" .Title "url" .RelPermalink) ($.Date.Format "2006")) }}
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <p class="byline">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format site.Params.dateFormat }}</time>
+    {{ range .GetTerms "tags" }}
+      <a class="topic" href="{{ .RelPermalink }}">#{{ lower .LinkTitle }}</a>
+    {{ end }}
+  </p>
+</header>
+
+<div class="post-content">
+  {{ .Content }}
+</div>
+
+{{ if not .Params.hideReply }}
+  {{ with site.Params.author.email }}
+  <p>
+    <a href='mailto:{{ . }}?subject={{ i18n "email-subject" }}"{{ $.Title }}"'>{{ i18n "email-reply" }} ↪</a>
+  </p>
+  {{ end }}
+{{ end }}
+
+{{ if or .PrevInSection .NextInSection }}
+<nav class="post-nav" aria-label="More posts">
+  {{ with .PrevInSection }}
+    <a class="post-nav-prev" href="{{ .RelPermalink }}" aria-label="Previous post: {{ .Title }}" title="{{ .Title }}">
+      <span class="post-nav-label">← Previous</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+  {{ else }}<span></span>{{ end }}
+  {{ with .NextInSection }}
+    <a class="post-nav-next" href="{{ .RelPermalink }}" aria-label="Next post: {{ .Title }}" title="{{ .Title }}">
+      <span class="post-nav-label">Next →</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+  {{ end }}
+</nav>
+{{ end }}
+{{ end }}

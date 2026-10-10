@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1 class="visually-hidden">{{ .Title }}</h1>
+
+{{ range hugo.Data.contributions.categories }}
+  {{ if .items }}
+  {{ $landscape := eq .shape "landscape" }}
+  <section class="contribution-group">
+    <h2 class="section-label">{{ .name }}</h2>
+    <ul class="poster-grid{{ if $landscape }} poster-grid--landscape{{ end }}">
+      {{ range .items }}
+      {{ $item := . }}
+      {{ $img := partial "poster-image.html" (dict "src" .image "video" .video "landscape" $landscape "anchor" .anchor) }}
+      {{ $href := .link | default .video }}
+      <li class="poster-card">
+        {{ if $href }}<a class="poster" href="{{ $href }}" rel="noopener" target="_blank">{{ else }}<span class="poster">{{ end }}
+          {{ with $img }}
+            <img src="{{ . }}" alt="{{ $item.title }}" loading="lazy" decoding="async" width="{{ cond $landscape 662 310 }}" height="{{ cond $landscape 354 486 }}">
+          {{ else }}
+            <span class="poster-placeholder">{{ .title }}</span>
+          {{ end }}
+          {{ if .video }}<span class="poster-play" aria-hidden="true">▶</span>{{ end }}
+        {{ if $href }}</a>{{ else }}</span>{{ end }}
+        <span class="poster-title">{{ .title }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+{{ end }}
+{{ end }}

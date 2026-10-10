@@ -1,0 +1,227 @@
+# Contributions page (/contributions/).
+#
+# Each categories block below is a labelled section; one with no items is
+# hidden. Items appear in the order listed (top of the list = top of the page).
+#
+# Category fields:
+#   name    (required)  section label
+#   shape   (optional)  "poster" (2:3, default) or "landscape" (16:9, for video)
+#
+# Item fields:
+#   title   (required)  production name, shown under the tile
+#   year    (optional)  for your reference; not shown
+#   image   (optional)  poster/thumbnail URL, downloaded and resized at build
+#                       time so the site keeps working if the source moves.
+#                       Or a path under assets/ (e.g. "contributions/foo.jpg") for
+#                       images whose links expire (LinkedIn, Google thumbnails).
+#                       Leave out for a YouTube video to use its thumbnail.
+#                       With no image at all, the tile shows a placeholder.
+#   link    (optional)  where the tile goes when clicked, e.g. the IMDb page
+#   video   (optional)  YouTube or Vimeo URL; the tile links to it (when there
+#                       is no link) and shows a play badge
+#   anchor  (optional)  which part of the image to keep when it's trimmed to
+#                       fit the tile: "top", "bottom", "left", "right" (default
+#                       centre)
+
+[[categories]]
+name = "Film and Television"
+
+  [[categories.items]]
+  title = "Sirius"
+  year = 2027
+  image = "https://m.media-amazon.com/images/M/MV5BMmFhYmNhZjgtMWNhNi00ZDA5LWFiNTMtZGNkMzkzYzNjYjA1XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt7634896/"
+
+  [[categories.items]]
+  title = "The Wrecking Crew"
+  year = 2026
+  image = "https://m.media-amazon.com/images/M/MV5BZDcyMmYxZmMtMjg5MC00NWMzLTgyNDEtOGI2MWEzMmFmNmVmXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt33046197/"
+
+  [[categories.items]]
+  title = "You, Me & Tuscany"
+  year = 2026
+  image = "https://m.media-amazon.com/images/M/MV5BZjg0MjliNDctMDE3NS00ZmMzLWE1ODUtZDcyN2I3NDE2YmUxXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt36352591/"
+
+  # No poster on IMDb yet — shows a placeholder until one exists.
+  [[categories.items]]
+  title = "White Mars"
+  year = 2026
+  link = "https://www.imdb.com/title/tt34457207/"
+
+  [[categories.items]]
+  title = "Christmas Karma"
+  year = 2025
+  image = "https://m.media-amazon.com/images/M/MV5BNjA2YTM5NmUtZjJiYS00NTJjLWFlMDMtNmJmMGY5NzAxM2JmXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt20723376/"
+
+  # No poster on IMDb yet — shows a placeholder until one exists.
+  [[categories.items]]
+  title = "Above the Below"
+  year = 2026
+  link = "https://www.imdb.com/title/tt29634374/"
+
+  [[categories.items]]
+  title = "Dream of the Black Whales"
+  year = 2025
+  image = "https://m.media-amazon.com/images/M/MV5BYWZiNWM2NWEtODE5My00OTYyLWI5MjUtYWQ2NTg0Nzk2NWU4XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt35080614/"
+
+  [[categories.items]]
+  title = "Venom: The Last Dance"
+  year = 2024
+  image = "https://m.media-amazon.com/images/M/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt16366836/"
+
+  [[categories.items]]
+  title = "Silo — Season 2"
+  year = 2025
+  image = "https://m.media-amazon.com/images/M/MV5BNjA5ODM4YTEtNDcxZi00N2ViLTg0MTgtNGQxNjBjZWY5YTk3XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt14688458/"
+
+  [[categories.items]]
+  title = "Barbie"
+  year = 2023
+  image = "https://m.media-amazon.com/images/M/MV5BYjI3NDU0ZGYtYjA2YS00Y2RlLTgwZDAtYTE2YTM5ZjE1M2JlXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt1517268/"
+
+  [[categories.items]]
+  title = "Flite"
+  year = 2023
+  image = "https://m.media-amazon.com/images/M/MV5BNjY0MGI2NTUtZWYzMC00YzZkLWEwZWMtNDJjM2VhNGQ0ODg1XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.framestore.com/work/flite"
+
+  [[categories.items]]
+  title = "Lockwood & Co."
+  year = 2023
+  image = "https://m.media-amazon.com/images/M/MV5BMjNlYzgxOTAtYmZjOC00ODg4LThiMDMtZWZlM2NkZjY4ZThlXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt13802576/"
+
+  [[categories.items]]
+  title = "Thor: Love and Thunder"
+  year = 2022
+  image = "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt10648342/"
+
+  [[categories.items]]
+  title = "Moon Knight"
+  year = 2022
+  image = "https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt10234724/"
+
+  [[categories.items]]
+  title = "Fantastic Beasts: The Secrets of Dumbledore"
+  year = 2022
+  image = "https://m.media-amazon.com/images/M/MV5BZjJmNDc3NTMtZjU4Yy00N2FkLTljYWEtMGZlOTA4ODcwNTc3XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt4123432/"
+
+  [[categories.items]]
+  title = "Spirit Riding Untamed"
+  year = 2021
+  image = "https://m.media-amazon.com/images/M/MV5BMzU0YTVhMTQtNTc5Ni00NGYyLWI2MzQtYTA1NDRhMzBmYzQwXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt11084896/"
+
+[[categories]]
+name = "Games"
+
+  [[categories.items]]
+  title = "Grand Theft Auto VI"
+  year = 2026
+  image = "https://m.media-amazon.com/images/M/MV5BYjEyZWNiOTQtYjRkOC00MWU5LWJmNTUtYTBiOWQzYjQyMTE5XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt18282598/"
+
+  [[categories.items]]
+  title = "Red Dead Online"
+  year = 2020
+  image = "https://m.media-amazon.com/images/M/MV5BZWU0YzA1MzItZjM5NC00ZTc1LTk0MjAtYzhiN2EyN2RmM2Y1XkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt16528798/"
+
+  [[categories.items]]
+  title = "Grand Theft Auto Online"
+  year = 2013
+  image = "https://m.media-amazon.com/images/M/MV5BN2MxZTg0ZjYtYWRhMC00MTZlLTg0Y2QtYjhjZDdiNTk2MWQxXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt16528784/"
+
+  [[categories.items]]
+  title = "Grand Theft Auto V"
+  year = 2013
+  image = "https://m.media-amazon.com/images/M/MV5BOGI2Yjk1ZTEtZTA2Yy00ZjQ3LTk4MTgtYTgyMGQ1Zjk3YjgzXkEyXkFqcGc@._V1_.jpg"
+  link = "https://www.imdb.com/title/tt2103188/"
+
+[[categories]]
+name = "Advertising and Music Videos"
+shape = "landscape"
+
+  [[categories.items]]
+  title = "Prince Mohammed Bin Salman Stadium"
+  year = 2023
+  video = "https://www.youtube.com/watch?v=grPwzBZmGew"
+
+  [[categories.items]]
+  title = "Uber One — Best Friends"
+  year = 2023
+  video = "https://www.youtube.com/watch?v=D2W3N5wsD6I"
+
+  [[categories.items]]
+  title = "Riyadh Season 2023 — New Identity"
+  year = 2023
+  video = "https://www.youtube.com/watch?v=g8-NjAOWhME"
+
+  [[categories.items]]
+  title = "The Chemical Brothers — Live Again"
+  year = 2023
+  video = "https://www.youtube.com/watch?v=pqU4g5iJk2Y"
+
+  [[categories.items]]
+  title = "Amazon Business — Bloom"
+  year = 2023
+  video = "https://www.youtube.com/watch?v=cWLdh0aHiH8"
+
+  [[categories.items]]
+  title = "COP27 — UN Climate Change Conference"
+  year = 2022
+  video = "https://www.youtube.com/watch?v=A1gSs1d5_HU"
+
+[[categories]]
+name = "Studios and Experiences"
+shape = "landscape"
+
+  [[categories.items]]
+  title = "Dimension × DNEG 360 — West London Studio"
+  year = 2023
+  image = "https://a.storyblok.com/f/252510/5760x3840/58b31277f5/dimension-dneg-360-west-london-studio-led-volume-watermark-copyright-01.jpg/m/2800x0/filters:quality(80):format(webp)"
+
+  # Saved locally: the source was a Google Images thumbnail.
+  [[categories.items]]
+  title = "OMEGA Pavilion — Paris 2024 Olympics"
+  year = 2024
+  image = "contributions/omega-pavilion-paris-2024.jpg"
+
+  [[categories.items]]
+  title = "Avastars — Press Event"
+  year = 2023
+  image = "https://cdn.prod.website-files.com/685ec3fa6b1973f9f4e0f9e9/6a2f18a1e285fce50d81720c_63f67671c9f26c0b9156ebd9_AvastarWeb3-2.jpeg"
+
+  # Saved locally: the LinkedIn image link expires on 29 Oct 2026.
+  [[categories.items]]
+  title = "APA London & IPA — ARRI Stage London"
+  year = 2023
+  image = "contributions/apa-ipa-arri-stage-london.jpg"
+
+  [[categories.items]]
+  title = "Sony DMPCE Virtual Production Space — Pinewood"
+  year = 2023
+  image = "https://res.cloudinary.com/iml/image/upload/w_750,c_scale/c_crop,g_custom/w_1024,c_scale/v1684404664/widgetdocs/DSC09707_ah2soy.jpg"
+
+  # Saved locally: the LinkedIn image link expires on 29 Oct 2026.
+  [[categories.items]]
+  title = "Dark x Light — ARRI Stage London"
+  year = 2022
+  image = "contributions/dark-x-light.jpg"
+
+  [[categories.items]]
+  title = "Hamble — Warner Bros. Studio Leavesden, V Stage"
+  year = 2023
+  image = "https://bedlamfilmproductions.com/wp-content/uploads/2023/08/HAMBLE-VP-Shoot-IMG_3433-1024x572.jpg"
+  anchor = "bottom"

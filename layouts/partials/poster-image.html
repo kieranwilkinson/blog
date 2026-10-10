@@ -1,0 +1,21 @@
+{{ $src := .src | default "" }}
+{{ if and (not $src) .video }}
+  {{ with findRESubmatch `(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]{11})` .video 1 }}
+    {{ $src = printf "https://i.ytimg.com/vi/%s/maxresdefault.jpg" (index (index . 0) 1) }}
+  {{ end }}
+{{ end }}
+{{ $url := cond (hasPrefix $src "http") $src "" }}
+{{ with $src }}
+  {{ $res := "" }}
+  {{ if hasPrefix . "http" }}
+    {{ with try (resources.GetRemote .) }}{{ with .Value }}{{ $res = . }}{{ end }}{{ end }}
+  {{ else }}
+    {{ $res = resources.Get . }}
+  {{ end }}
+  {{ with $res }}
+    {{ $anchor := $.anchor | default "center" | title }}
+    {{ $img := .Process (printf "fill %s %s webp q80" (cond $.landscape "662x354" "310x486") $anchor) }}
+    {{ $url = (resources.Copy (printf "images/contributions/%s-%s.webp" (md5 $src) (lower $anchor)) $img).RelPermalink }}
+  {{ end }}
+{{ end }}
+{{ return $url }}

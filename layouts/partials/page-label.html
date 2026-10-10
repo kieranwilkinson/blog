@@ -1,0 +1,12 @@
+<nav class="section-label page-label" aria-label="Breadcrumb">
+  <span class="crumbs">
+    {{ range $i, $c := . }}
+      {{ if $i }}<span class="crumb-sep" aria-hidden="true">/</span>{{ end }}
+      {{ if reflect.IsMap $c }}
+        <a href="{{ $c.url }}">{{ $c.name }}</a>
+      {{ else }}
+        <span aria-current="page">{{ $c }}</span>
+      {{ end }}
+    {{ end }}
+  </span>
+</nav>

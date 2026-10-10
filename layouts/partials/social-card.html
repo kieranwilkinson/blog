@@ -1,0 +1,11 @@
+{{- $bold := resources.Get "fonts/Inter-Bold.ttf" -}}
+{{- $regular := resources.Get "fonts/Inter-Regular.ttf" -}}
+{{- $mono := resources.Get "fonts/JetBrainsMono-Regular.ttf" -}}
+{{- $text := cond .IsPage .Title site.Params.description -}}
+{{- $body := (resources.Get "images/card-title.png").Filter (images.Text $text (dict
+  "font" (cond .IsPage $bold $regular) "size" (cond .IsPage 44 34) "linespacing" 16 "color" (cond .IsPage "#111111" "#2b2b2b") "x" 0 "y" 0)) -}}
+{{- $card := (resources.Get "images/card-bg.png").Filter
+  (images.Text site.Title (dict "font" $bold "size" 76 "color" "#111111" "x" 84 "y" 120))
+  (images.Overlay $body 88 248)
+  (images.Text (replaceRE `^https?://|/$` "" site.BaseURL) (dict "font" $mono "size" 24 "color" "#6b6b6b" "x" 116 "y" 556)) -}}
+{{- return ($card.Process "png") -}}

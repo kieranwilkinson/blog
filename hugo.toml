@@ -4,12 +4,22 @@ copyright = "Kieran Wilkinson"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 
+[taxonomies]
+  tag = "tags"
+
 [[menu.main]]
-name     = "Archive"
-url      = "/archive/"
+name     = "Contributions"
+url      = "/contributions/"
 weight   = 1
 
+[[menu.main]]
+name     = "Journal"
+url      = "/journal/"
+weight   = 2
+
 [markup]
+  [markup.goldmark.parser.attribute]
+    block = true
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
@@ -17,32 +27,18 @@ weight   = 1
 
 [languages]
   [languages.en]
-    title = "Hello, I’m Kieran Wilkinson. 👋"
-    languageName = "en-US 🇺🇸"
-    LanguageCode = "en-US"
+    title = "Kieran Wilkinson"
+    languageName = "English"
+    LanguageCode = "en-GB"
     contentDir = "content"
-    [languages.en.params]
-      madeWith = "© 2026"
 
 [params]
-  description = """
-Confident creative technologist and real-time technical director \
-with experience in large-scale projects spanning film visual effects, \ 
-games, and on-set virtual production.\
-"""
+  mainSections = ["journal"]
+  description = "Confident creative technologist and real-time technical director with experience in large-scale projects spanning film visual effects, games, and on-set virtual production."
   favicon = "images/favicon.ico"
-  images = ["images/share.webp"]
   title = "Kieran Wilkinson"
-  dateFormat = "2006-01-02"
-  hideUntranslated = true
-  themeStyle = "original"
-  generateSocialCard = true
-
-  # Social media. Delete any item you aren't using to make sure it won't show up
-  # in your website's metadata.
-  [params.social]
-    github = "https://github.com/kieranwilkinson"
+  dateFormat = "2 Jan 2006"
 
   [params.author]
-    name = "Kieran Wilkinson" # Your name as shown in the RSS feed metadata
-    email = "kieranlukewilkinson@gmail.com" # Added to the footer so readers can reply to posts
+    name = "Kieran Wilkinson"
+    email = "kieranlukewilkinson@gmail.com"
