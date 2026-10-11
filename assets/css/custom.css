@@ -649,7 +649,8 @@ footer {
   gap: 22px;
 }
 
-.footer-link {
+.footer-link,
+.footer-link:visited {
   color: var(--muted);
   text-decoration: none;
 }
