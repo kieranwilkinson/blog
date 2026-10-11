@@ -184,13 +184,8 @@ shape = "landscape"
   video = "https://www.youtube.com/watch?v=A1gSs1d5_HU"
 
 [[categories]]
-name = "Studios and Experiences"
+name = "Immersive and Live"
 shape = "landscape"
-
-  [[categories.items]]
-  title = "Dimension × DNEG 360 — West London Studio"
-  year = 2023
-  image = "https://a.storyblok.com/f/252510/5760x3840/58b31277f5/dimension-dneg-360-west-london-studio-led-volume-watermark-copyright-01.jpg/m/2800x0/filters:quality(80):format(webp)"
 
   # Saved locally: the source was a Google Images thumbnail.
   [[categories.items]]
@@ -208,6 +203,15 @@ shape = "landscape"
   title = "APA London & IPA — ARRI Stage London"
   year = 2023
   image = "contributions/apa-ipa-arri-stage-london.jpg"
+
+[[categories]]
+name = "R&D"
+shape = "landscape"
+
+  [[categories.items]]
+  title = "Dimension × DNEG 360 — West London Studio"
+  year = 2023
+  image = "https://a.storyblok.com/f/252510/5760x3840/58b31277f5/dimension-dneg-360-west-london-studio-led-volume-watermark-copyright-01.jpg/m/2800x0/filters:quality(80):format(webp)"
 
   [[categories.items]]
   title = "Sony DMPCE Virtual Production Space — Pinewood"
