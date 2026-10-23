@@ -17,7 +17,7 @@ html {
   background-color: var(--bg);
   background-image: conic-gradient(at 1px 1px, transparent 75%, var(--line) 0);
   background-size: var(--cell) var(--cell);
-  background-position: 50% 0;
+  background-position: calc(50% - 330.5px) 0;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   min-height: 100vh;
   padding: 0 20px;
   color: var(--fg);
-  background: linear-gradient(var(--bg), var(--bg)) content-box;
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
