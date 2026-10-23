@@ -56,10 +56,10 @@ name = "Film and Television"
   image = "https://m.media-amazon.com/images/M/MV5BNjA2YTM5NmUtZjJiYS00NTJjLWFlMDMtNmJmMGY5NzAxM2JmXkEyXkFqcGc@._V1_.jpg"
   link = "https://www.imdb.com/title/tt20723376/"
 
-  # No poster on IMDb yet — shows a placeholder until one exists.
   [[categories.items]]
   title = "Above the Below"
   year = 2026
+  image = "https://m.media-amazon.com/images/M/MV5BMTY2YmRjMTUtZjczYS00MTNlLWIzYjEtNDljMjUzNjhiOTFiXkEyXkFqcGc@._V1_.jpg"
   link = "https://www.imdb.com/title/tt29634374/"
 
   [[categories.items]]
